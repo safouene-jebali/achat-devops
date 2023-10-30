@@ -7,6 +7,8 @@ services:
      - 3307:3306
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    volumes:
+      - db:/var/lib/mysql
 
 
   achat_backend:
@@ -16,3 +18,6 @@ services:
      - 6868:8089
     depends_on:
      - mysqldb
+    stdin_open: true
+    tty : true
+  
