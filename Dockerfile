@@ -1,4 +1,4 @@
 FROM openjdk:11-jre-slim
 EXPOSE 8089
-COPY ./target/achat.jar achat.jar
+ADD target/achat-1.0.jar achat-1.0.jar
 ENTRYPOINT ["java","-jar","/achat.jar"]
