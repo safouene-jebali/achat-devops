@@ -10,7 +10,7 @@ services:
 
 
   achat_backend:
-    image: safouenejebali/achat:latest
+    image: safouenejebali/achat
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: root_password
