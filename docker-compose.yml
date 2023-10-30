@@ -12,8 +12,6 @@ services:
   achat_backend:
     image: safouenejebali/achat
     restart: on-failure
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
     ports:
      - 6868:8089
     depends_on:
