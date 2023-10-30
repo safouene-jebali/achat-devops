@@ -10,7 +10,7 @@ services:
 
 
   achat_backend:
-    image: safouenejebali/achat
+    image: safouenejebali/achat:1.0.0
     restart: on-failure
     ports:
      - 6868:8089
