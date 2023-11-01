@@ -19,5 +19,3 @@ services:
       - .m2:/root/.m2
     stdin_open: true
     tty: true
-    volumes:
-    db:
