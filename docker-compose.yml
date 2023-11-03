@@ -2,11 +2,11 @@ version: "3.8"
 
 services:
   mysqldb:
-    image: mysql:5.7.
+    image: mysql:5.7
     restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=
-      - MYSQL DATABASE=timesheet_db
+      - MYSQL_DATABASE=timesheet_db
     ports:
       - 3306:3306
     volumes:
@@ -28,5 +28,6 @@ services:
       }'
     stdin_open: true
     tty: true
+
 volumes:
-  db.:
+  db :
