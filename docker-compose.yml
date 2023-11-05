@@ -14,7 +14,7 @@ services:
   achat-backend:
     depends_on:
       - mysqldb
-    image: nardine22/achat
+    image: nardine22/achat:1.0
     restart: on-failure
     ports:
       - 8089:8089
