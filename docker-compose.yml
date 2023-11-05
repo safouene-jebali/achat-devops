@@ -5,16 +5,17 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - db:/var/lib/mysql
   achat-backend:
     depends_on:
       - mysqldb
+    image: nardine22/achat:1.0.0
     build: ./
     restart: on-failure
     ports:
-      - 6868:8089
+      - 8089:8089
     volumes:
       - .m2:/root/.m2
     stdin_open: true
