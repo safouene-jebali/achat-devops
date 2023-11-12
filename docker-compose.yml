@@ -13,7 +13,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     networks:
-      - mynetwork
+      - akram-sahli-5ia_mynetwork
 
   achat-backend:
     depends_on:
@@ -21,7 +21,7 @@ services:
     image: sahliakram/achat:1.0.0
     restart: on-failure
     ports:
-      - 8089:8089
+      - 8082:8082
     environment:
       SPRING_APPLICATION_JSON: '{
                       "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
@@ -33,11 +33,11 @@ services:
     stdin_open: true
     tty: true
     networks:
-      - mynetwork
-      -
+      - akram-sahli-5ia_mynetwork
+
 networks:
   mynetwork:
     driver: bridge
-    
+
 volumes:
   db :
