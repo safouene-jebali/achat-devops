@@ -36,7 +36,7 @@ services:
       - akram-sahli-5ia_mynetwork
 
 networks:
-  mynetwork:
+  akram-sahli-5ia_mynetwork:
     driver: bridge
 
 volumes:
