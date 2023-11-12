@@ -5,15 +5,15 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      #- MYSQL_ROOT_PASSWORD=root
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=root
+      #- MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=achatdb
     ports:
       - 3306:3306
     volumes:
       - db:/var/lib/mysql
     networks:
-      - akram-sahli-5ia_mynetwork
+      - mynetwork
 
   achat-backend:
     depends_on:
@@ -26,17 +26,17 @@ services:
       SPRING_APPLICATION_JSON: '{
                       "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
                       "spring.datasource.username" : "root",
-                      "spring.datasource.password" : "",
+                      "spring.datasource.password" : "root",
                       "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
                       "spring.jpa.hibernate.ddl-auto" : "update"
               }'
     stdin_open: true
     tty: true
     networks:
-      - akram-sahli-5ia_mynetwork
+      - mynetwork
 
 networks:
-  akram-sahli-5ia_mynetwork:
+  mynetwork:
     driver: bridge
 
 volumes:
