@@ -12,6 +12,9 @@ services:
       - 3306:3306
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - mynetwork
+
   achat-backend:
     depends_on:
       - mysqldb
@@ -29,6 +32,12 @@ services:
               }'
     stdin_open: true
     tty: true
-
+    networks:
+      - mynetwork
+      -
+networks:
+  mynetwork:
+    driver: bridge
+    
 volumes:
   db :
