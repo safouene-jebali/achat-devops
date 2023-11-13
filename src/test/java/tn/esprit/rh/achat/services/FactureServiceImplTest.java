@@ -12,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.rh.achat.entities.Facture;
 
 import tn.esprit.rh.achat.repositories.FactureRepository;
@@ -21,7 +20,7 @@ import tn.esprit.rh.achat.repositories.FactureRepository;
 //@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 
-class FactureServiceImplMock {
+class TestFactureServiceImplMock {
     @Mock
     FactureRepository factureRepository;
     @InjectMocks
@@ -29,7 +28,7 @@ class FactureServiceImplMock {
     long factureId=3;
     Facture f=new Facture((long) 2,(float)12,(float)50,false);
     Facture f2=new Facture((long) 4,(float)0,(float)1200,false);
-    List<Facture> listFactures = new ArrayList<Facture>();
+    List<Facture> listFactures = new ArrayList<>();
 
     @Test
     void addFactureTest()
