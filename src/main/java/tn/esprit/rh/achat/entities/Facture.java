@@ -24,6 +24,16 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Facture implements Serializable {
 	private static final long serialVersionUID = 1L;
+	public Facture(Long idFacture, Float montantRemise, Float montantFacture, boolean archivee) {
+		super();
+		this.idFacture = idFacture;
+		this.montantRemise = montantRemise;
+		this.montantFacture = montantFacture;
+		this.archivee = archivee;
+		this.dateCreationFacture=new Date();
+		this.dateDerniereModificationFacture=new Date();
+
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +45,8 @@ public class Facture implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateDerniereModificationFacture;
 	private Boolean archivee;
-	@OneToMany(mappedBy = "facture")
-	private Set<DetailFacture> detailsFacture;
+	/*@OneToMany(mappedBy = "facture")
+	private Set<DetailFacture> detailsFacture; */
     @ManyToOne
     @JsonIgnore
     private Fournisseur fournisseur;
