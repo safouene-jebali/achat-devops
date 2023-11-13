@@ -28,6 +28,16 @@ public class Produit implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	public Produit(Long idProduit, String codeProduit, String libelleProduit, float prix) {
+		super();
+		this.idProduit = idProduit;
+		this.codeProduit = codeProduit;
+		this.libelleProduit = libelleProduit;
+		this.prix = prix;
+		this.dateCreation=new Date();
+		this.dateDerniereModification=new Date();
+
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProduit;
@@ -47,9 +57,9 @@ public class Produit implements Serializable {
 	@ManyToOne
 	@JsonIgnore
 	private CategorieProduit categorieProduit;
-	
 
 
-	
+
+
 
 }
