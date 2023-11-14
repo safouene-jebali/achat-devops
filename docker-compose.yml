@@ -10,8 +10,6 @@ services:
       MYSQL_DATABASE: achatdb
       MYSQL_PASSWORD: mysql
       MYSQL_ROOT_PASSWORD: mysql
-    volumes:
-      - db:/var/lib/mysql
 
   achat-backend:
     image: sahliakram/achat:1.0.0
