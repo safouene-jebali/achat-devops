@@ -59,7 +59,16 @@ public class Produit implements Serializable {
 	private CategorieProduit categorieProduit;
 
 
+	public Long getIdProduit() {
+		return idProduit;
+	}
 
+	public void setLibelleProduit(String libelleProduit) {
+		this.libelleProduit = libelleProduit;
+	}
 
+	public float getPrix() {
+		return prix;
+	}
 
 }
