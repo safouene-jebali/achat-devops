@@ -106,3 +106,5 @@ Isrc/main/java/tn/esprit/rh/achat/services/SecteurActiviteServiceImpl.java,3\2\
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
+t
+Dsrc/test/java/tn/esprit/rh/achat/SecteurActiviteServiceImplTest.java,d\6\d630fc3b1ff3c6f5b34c2cd77e591fb2c5764a3e
