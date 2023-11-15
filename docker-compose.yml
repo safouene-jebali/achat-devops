@@ -7,7 +7,7 @@ services:
     environment:
       #- MYSQL_ROOT_PASSWORD=
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_DATABASE=timesheet_db
+      - MYSQL_DATABASE=achatdb
     ports:
       - 3306:3306
     volumes:
@@ -18,10 +18,10 @@ services:
     image: shaymaoueslati/achat:1.0
     restart: on-failure
     ports:
-      - 8082:8082
+      - 8089:8089
     environment:
       SPRING APPLICATION JSON: '{
-          "spring.datasource.url": "jdbc:mysql://mysqldb:3306/timesheet_db?createDatabaseIfNotExist=true",
+          "spring.datasource.url": "jdbc:mysql://mysqldb:3306/achatdb?createDatabaseIfNotExist=true",
            "spring.datasource.username": "root",
           "spring.datasource.password": "",
           "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.MySQL5InnoDBDialect",
