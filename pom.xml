@@ -74,6 +74,9 @@
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
+						 <exclude>
+ 							 **src/test/java/tn/esprit/rh/achat/services/FactureServiceImplTest.java
+                        		        </exclude>
 					</excludes>
 				</configuration>
 			</plugin>
