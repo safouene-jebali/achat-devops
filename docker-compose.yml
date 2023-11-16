@@ -9,8 +9,7 @@ services:
       - MYSQL_DATABASE=achatdb
     ports:
       - 3306:3306
-    volumes:
-      - db:/var/lib/mysql
+    
   achat-backend:
     depends_on:
       - mysqldb
@@ -28,5 +27,6 @@ services:
       }'
     stdin_open: true
     tty: true
+    
 
 
