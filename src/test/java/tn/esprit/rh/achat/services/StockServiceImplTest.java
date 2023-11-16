@@ -15,12 +15,21 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 //import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.rh.achat.entities.Stock;
+import javax.persistence.EntityNotFoundException;
+
+import
+
+            static org.junit.jupiter.api.Assertions.*;
+import
+
+        static org.mockito.Mockito.*;
 
 import tn.esprit.rh.achat.repositories.StockRepository;
 import tn.esprit.rh.achat.services.StockServiceImpl;
 
-//@SpringBootTest
+@SpringBootTest
 @ExtendWith(MockitoExtension.class)
 
 class StockServiceImplMock {
