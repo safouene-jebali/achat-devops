@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE= achatdb
     ports:
       - 3306:3306
@@ -17,7 +17,7 @@ services:
       - 8089:8089
     environment:
       SPRING_APPLICATION_JSON: '{
-                    "spring.datasource.url"  : "jdbc:mysql://192.168.100.123:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+                    "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
                     "spring.datasource.username" : "root",
                     "spring.datasource.password" : "",
                     "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
